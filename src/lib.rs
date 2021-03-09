@@ -417,6 +417,10 @@ impl Metadata {
         let mut buf = BufReader::new(File::open(path)?);
         Self::from_archive(&mut ZipArchive::new(&mut buf)?)
     }
+
+    pub fn from_read<R: std::io::Read + std::io::Seek>(reader: R) -> Result<Self, Error> {
+        Self::from_archive(&mut ZipArchive::new(reader)?)
+    }
 }
 
 // TODO: https://www.oreilly.com/library/view/epub-3-best/9781449329129/ch01.html
