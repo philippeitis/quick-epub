@@ -5,6 +5,6 @@ authors = ["philippeitis <33013301+philippeitis@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
-zip = "0.5.9"
+zip = "0.5.13"
 quick-xml = "0.22.0"
-isbn2 = { git = "https://github.com/philippeitis/isbn-rs.git" }
+isbn2 = "0.4.0"
